@@ -120,18 +120,81 @@ body{
     width: 65%;
     height: 100%;
 }
+/* header chat  */
 .header-chat{
-    background-color: brown;
+    background-color: lightgrey;
     height: 10%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    padding: .625rem;
 }
+.chat-contact-data{
+    margin: 0 auto 0 .625rem;
+}
+.chat-contact-data p{
+    color: grey;
+}
+.chat-contact-img img{
+    width: 2.5rem;
+    border-radius: 50%;
+}
+.chat-contact-button button{
+    border-style: none;
+    background-color: lightgrey;
+    color: grey;
+    margin: 0 .3125rem;
+}
+/* main chat  */
 .chat{
-    background-color: yellow;
+    background-image: url(../img/mine.jpg);
     height: 80%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem 2.5rem;
 }
+.user-message{
+    background-color: lightgreen;
+    padding: 1.25rem;
+    margin: .625rem;
+    border-radius: .625rem;
+    margin-left: 55%;
+}
+.contact-message{
+    background-color: white;
+    padding: 1.25rem;
+    border-radius: .625rem;
+    margin-right: 55%;
+}
+/* main footer  */
 .footer-chat{
-    background-color: blue;
+    background-color:lightgrey;
     height: 10%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+}
+.footer-chat button{
+    background-color: lightgrey;
+    border-style: none;
+    color: grey;
+    font-size: 1.25rem;
+    
+}
+.new-message{
+    display: flex;
+    flex-grow: 1;
+}
+.new-message input{
+    height: 1.875rem;
+    display: flex;
+    flex-grow: 1;
+}
+.emoji{
+    margin-right: 1.25rem;
+}
+.microphone{
+    margin-left: 1.25rem;
 }
