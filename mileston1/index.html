@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- app  -->
-    <div class="app">
+    <div id="app">
         <!-- container main  -->
         <div class="main-container">
             <!-- container  -->
@@ -49,12 +49,12 @@
                     <!-- / search sidebar   -->
                     <!-- contacts  -->
                     <div class="contacts">
-                        <div class="contact">
+                        <div class="contact" v-for="contact in contacts">
                             <div class="contact-img">
-                                <img src="./img/avatar_1.jpg" alt="contact img">
+                                <img :src="contact.avatar" alt="contact img" >
                             </div>
                             <div class="contact-data">
-                                <h4>Michele</h4>
+                                <h4>{{contact.name}}</h4>
                                 <p>Ultimo messaggio inviato</p>
                             </div>
                             <div class="contact-time">12:00</div>
@@ -115,6 +115,7 @@
         <!-- / container main  -->
     </div>
     <!-- / app  -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
