@@ -5,28 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- app  -->
     <div class="app">
+        <!-- container main  -->
         <div class="main-container">
+            <!-- container  -->
             <div class="container">
+                <!-- sidebar  -->
                 <div class="sidebar">
+                    <!-- header sidebar  -->
                     <div class="header-sidebar">
-                        <div class="user">user</div>
-                        <div class="notifications">notifications</div>
+                        <div class="user">
+                            <div class="user-info">
+                                <img src="./img/avatar_3.jpg" alt="user img">
+                                <p>Sofia</p>
+                            </div>
+                            <div class="user-button">
+                                <button><i class="fa-solid fa-circle-notch"></i></button>
+                                <button><i class="fa-solid fa-message"></i></button>
+                                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                        </div>
+                        <div class="notifications">
+                            <div class="notifications-button">
+                                <button><i class="fa-solid fa-bell-slash"></i></button>
+                            </div>
+                            <div class="notifications-info">
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="search-sidebar">search</div>
-                    <div class="contacts">contacts</div>
+                    <!-- / header sidebar  -->
+                    <!-- search sidebar  -->
+                    <div class="search-sidebar">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text">
+                    </div>
+                    <!-- / search sidebar   -->
+                    <!-- contacts  -->
+                    <div class="contacts">
+                        <div class="contact">
+                            <div class="contact-img">
+                                <img src="./img/avatar_1.jpg" alt="contact img">
+                            </div>
+                            <div class="contact-data">
+                                <h4>Michele</h4>
+                                <p>Ultimo messaggio inviato</p>
+                            </div>
+                            <div class="contact-time">12:00</div>
+                        </div>
+                    </div>
+                    <!-- / contacts  -->
                 </div>
+                <!-- / sidebar  -->
+                <!-- container chat  -->
                 <div class="container-chat">
+                    <!-- header chat  -->
                     <div class="header-chat">contact</div>
+                    <!-- / header chat  -->
+                    <!-- chat  -->
                     <div class="chat">chat</div>
+                    <!-- / chat  -->
+                    <!-- footer chat  -->
                     <div class="footer-chat">new message</div>
+                    <!-- / footer chat  -->
                 </div>
+                <!-- / container chat  -->
             </div>
+            <!-- / container  -->
         </div>
+        <!-- / container main  -->
     </div>
+    <!-- / app  -->
     <script src="./js/app.js"></script>
 </body>
 </html>

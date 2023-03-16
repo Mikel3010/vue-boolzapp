@@ -26,26 +26,98 @@ body{
 /* sidebar  */
 .sidebar{
     height: 100%;
-    width: 25%;
+    width: 35%;
 }
+/* header-sidebar  */
 .header-sidebar{
-    background-color: aqua;
+    background-color: lightgrey;
     height: 20%;
     width: 100%;
 }
+/* user header sidebar  */
+.user{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-info{
+    display: flex;
+    padding: .625rem;
+    align-items: center;
+}
+.user-info img{
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: .3125rem;
+}
+.user-button{
+    margin-right: .3125rem;
+}
+.user-button button{
+    background-color: lightgrey;
+    border-style: none;
+    margin: 0 .3125rem;
+    color: gray;
+}
+/* nonotifications sidebar  */
+.notifications{
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    padding: .625rem;
+}
+.notifications-button button{
+    font-size: 1.5rem;
+    color: lightskyblue;
+    border-radius: 50%;
+    padding: .625rem;
+    border: white;
+    margin-right: .9375rem;
+}
+/* search sidebar  */
 .search-sidebar{
-    background-color: chartreuse;
-    height: 10%;
+    background-color: white;
+    height: 5%;
     width: 100%;
 }
+.search-sidebar{
+    display: flex;
+    align-items: center;
+    padding: 0 .625rem;
+}
+.search-sidebar button{
+    background-color: white;
+    border-style: none;
+    padding: .125rem;
+}
+.search-sidebar input{
+    display: flex;
+    flex-grow: 1;
+}
+/* contacts sidebar  */
 .contacts{
     background-color: white;
-    height: 70%;
+    height: 75%;
     width: 100%;
+    overflow: auto;
+}
+.contact{
+    display: flex;
+    padding: .625rem;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+.contact-img img{
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: .625rem;
+}
+.contact-data{
+    margin: 0 auto 0 0;
 }
 /* chat  */
 .container-chat{
-    width: 75%;
+    width: 65%;
     height: 100%;
 }
 .header-chat{
