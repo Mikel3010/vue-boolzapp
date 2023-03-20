@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- app  -->
+    <div id="app">
+        <!-- container main  -->
+        <div class="main-container">
+            <!-- container  -->
+            <div class="container">
+                <!-- sidebar  -->
+                <div class="sidebar">
+                    <!-- header sidebar  -->
+                    <div class="header-sidebar">
+                        <div class="user">
+                            <div class="user-info">
+                                <img src="./img/avatar_3.jpg" alt="user img">
+                                <p>Mikel</p>
+                            </div>
+                            <div class="user-button">
+                                <button><i class="fa-solid fa-circle-notch"></i></button>
+                                <button><i class="fa-solid fa-message"></i></button>
+                                <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            </div>
+                        </div>
+                        <div class="notifications">
+                            <div class="notifications-button">
+                                <button><i class="fa-solid fa-bell-slash"></i></button>
+                            </div>
+                            <div class="notifications-info">
+                                <p>Ricevi notifiche di nuovi messaggi</p>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / header sidebar  -->
+                    <!-- search sidebar  -->
+                    <div class="search-sidebar">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="text">
+                    </div>
+                    <!-- / search sidebar   -->
+                    <!-- contacts  -->
+                    <div class="contacts">
+                        <div class="contact" v-for="(contact,i) in contacts" @click="changeIndex(i)">
+                            <div class="contact-img">
+                                <img :src=`./img/avatar${contact.avatar}.jpg` alt="contact img" >
+                            </div>
+                            <div class="contact-data">
+                                <h4>{{contact.name}}</h4>
+                                <p>Ultimo messaggio inviato</p>
+                            </div>
+                            <div class="contact-time">12:00</div>
+                        </div>
+                    </div>
+                    <!-- / contacts  -->
+                </div>
+                <!-- / sidebar  -->
+                <!-- container chat  -->
+                <div class="container-chat">
+                    <!-- header chat  -->
+                    <div class="header-chat">
+                        <div class="chat-contact-img">
+                            <img :src=`./img/avatar${contacts[currentIndex].avatar}.jpg` alt="contact img">
+                        </div>
+                        <div class="chat-contact-data">
+                            <h4>{{contacts[currentIndex].name}}</h4>
+                            <p>Ultimo accesso oggi alle 12:00</p>
+                        </div>
+                        <div class="chat-contact-button">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <button><i class="fa-solid fa-paperclip"></i></button>
+                            <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        </div>
+                    </div>
+                    <!-- / header chat  -->
+                    <!-- chat  -->
+                    <div class="chat">
+                        <div v-for="(message,index) in contacts[currentIndex].messages">
+                            <div :class="message.status">
+                                <div>{{message.message}}</div>
+                                <div>{{message.date}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / chat  -->
+                    <!-- footer chat  -->
+                    <div class="footer-chat">
+                        <div class="emoji">
+                            <button><i class="fa-regular fa-face-smile"></i></button>
+                        </div>
+                        <div class="new-message">
+                            <input type="text" v-model.trim="newMessage" @keyup.enter="sentMessage">
+                        </div>
+                        <div class="microphone">
+                            <button><i class="fa-solid fa-microphone"></i></button>
+                        </div>
+                    </div>
+                    <!-- / footer chat  -->
+                </div>
+                <!-- / container chat  -->
+            </div>
+            <!-- / container  -->
+        </div>
+        <!-- / container main  -->
+    </div>
+    <!-- / app  -->
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
