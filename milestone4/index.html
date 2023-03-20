@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -18,11 +21,11 @@
                 <!-- sidebar  -->
                 <div class="sidebar">
                     <!-- header sidebar  -->
-                    <div class="header-sidebar">
+                    <div class="header-sidebar ">
                         <div class="user">
                             <div class="user-info">
                                 <img src="./img/avatar_3.jpg" alt="user img">
-                                <p>Mikel</p>
+                                <h4>Mikel</h4>
                             </div>
                             <div class="user-button">
                                 <button><i class="fa-solid fa-circle-notch"></i></button>
@@ -44,7 +47,7 @@
                     <!-- search sidebar  -->
                     <div class="search-sidebar">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" v-model.trim="searchChat" @keyup="filterChat">
+                        <input type="text" v-model.trim="searchChat" @keyup="filterChat" placeholder="Cerca o inizia una nuova chat">
                     </div>
                     <!-- / search sidebar   -->
                     <!-- contacts  -->
@@ -58,7 +61,7 @@
                                     <h4>{{contact.name}}</h4>
                                     <p>Ultimo messaggio inviato</p>
                                 </div>
-                                <div class="contact-time">12:00</div>
+                                <div class="contact-time"><small>12:00</small></div>
                             </div>
                         </div>
                     </div>
@@ -87,8 +90,8 @@
                     <div class="chat">
                         <div v-for="(message,index) in contacts[currentIndex].messages">
                             <div :class="message.status">
-                                <div>{{message.message}}</div>
-                                <div>{{message.date}}</div>
+                                <div class="chat-msg">{{message.message}}</div>
+                                <div class="chat-time"><small>{{'16:00'}}</small></div>
                             </div>
                         </div>
                     </div>

@@ -187,7 +187,7 @@ createApp({
             this.newMessage = ''
             setTimeout(()=>{
                 const msg ={
-                    date: '10/10/2022',
+                    date: '17:00',
                     message: 'ok',
                     status: 'received'
                 }

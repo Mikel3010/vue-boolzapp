@@ -115,6 +115,9 @@ body{
 .contact-data{
     margin: 0 auto 0 0;
 }
+.contact-time{
+    color: grey;
+}
 /* chat  */
 .container-chat{
     width: 65%;
@@ -157,16 +160,26 @@ body{
 }
 .sent{
     background-color: lightgreen;
-    padding: 1.25rem;
+    padding: .625rem 1.25rem 0 1.25rem;
     margin: .625rem;
     border-radius: .625rem;
     margin-left: 55%;
+    display: flex;
+    flex-direction: column;
 }
 .received{
     background-color: white;
-    padding: 1.25rem;
+    padding: .625rem 1.25rem 0 1.25rem;
     border-radius: .625rem;
     margin-right: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-time{
+    padding: 0;
+    margin-left: auto;
+    color: gray;
 }
 /* main footer  */
 .footer-chat{
